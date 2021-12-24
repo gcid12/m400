@@ -113,12 +113,13 @@ const drawBackground = () => {
   ctx.fillRect(0, 0, format.width, format.height);
 };
 
-const addMetadata = (_dna, _edition) => {
+const addMetadata = (_dna, _edition, empty) => {
+  //Empty means generating placeholders
   let dateTime = Date.now();
   let tempMetadata = {
     name: `${namePrefix} #${_edition}`,
     description: description,
-    image: `${baseUri}/${_edition}.png`,
+    image: `${baseUri}/${empty ? '1' : _edition}.png`,
     dna: sha1(_dna),
     edition: _edition,
     date: dateTime,
@@ -389,7 +390,7 @@ const startCreating = async (config) => {
             ? console.log("Editions left to create: ", abstractedIndexes)
             : null;
           saveImage(abstractedIndexes[0]);
-          addMetadata(newDna, abstractedIndexes[0]);
+          addMetadata(newDna, abstractedIndexes[0], false);
           saveMetaDataSingleFile(abstractedIndexes[0]);
           console.log(
             `Created edition: ${abstractedIndexes[0]}, with DNA: ${sha1(
@@ -416,19 +417,17 @@ const startCreating = async (config) => {
   writeMetaData(JSON.stringify(metadataList, null, 2));
 };
 
-const startCreating_OG = async () => {
+
+const startCreatingEmpty = async (config) => {
   let layerConfigIndex = 0;
   let editionCount = 1;
   let failedCount = 0;
   let abstractedIndexes = [];
 
-  let startAt= layerConfigurations[layerConfigurations.length - 1].startAt;
+  let startAt= config[0].startAt;
   for (
-    // let i = network == NETWORK.sol ? 0 : 1;
-    // i <= layerConfigurations[layerConfigurations.length - 1].growEditionSizeTo;
-    // i++
     let i = startAt;
-    i <= startAt + layerConfigurations[layerConfigurations.length - 1].growEditionSizeTo;
+    i <= startAt + config[0].growEditionSizeTo;
     i++
   ) {
     console.log('here:',i)
@@ -440,15 +439,16 @@ const startCreating_OG = async () => {
   debugLogs
     ? console.log("Editions left to create: ", abstractedIndexes)
     : null;
-  while (layerConfigIndex < layerConfigurations.length) {
+  while (layerConfigIndex < config.length) {
     const layers = layersSetup(
-      layerConfigurations[layerConfigIndex].layersOrder,
+      config[0].layersOrder,
+      config[0].location
     );
     while (
-      editionCount <= layerConfigurations[layerConfigIndex].growEditionSizeTo
+      editionCount <= config[0].growEditionSizeTo
     ) {
       let newDna = createDna(layers);
-      if (isDnaUnique(dnaList, newDna)) {
+      //if (isDnaUnique(dnaList, newDna)) {
         let results = constructLayerToDna(newDna, layers);
         let loadedElements = [];
 
@@ -477,7 +477,7 @@ const startCreating_OG = async () => {
             drawElement(
               renderObject,
               index,
-              layerConfigurations[layerConfigIndex].layersOrder.length
+              config[0].layersOrder.length
             );
             if (gif.export) {
               hashlipsGiffer.add();
@@ -489,8 +489,8 @@ const startCreating_OG = async () => {
           debugLogs
             ? console.log("Editions left to create: ", abstractedIndexes)
             : null;
-          saveImage(abstractedIndexes[0]);
-          addMetadata(newDna, abstractedIndexes[0]);
+          saveImage(11);
+          addMetadata(newDna, abstractedIndexes[0], true);
           saveMetaDataSingleFile(abstractedIndexes[0]);
           console.log(
             `Created edition: ${abstractedIndexes[0]}, with DNA: ${sha1(
@@ -501,20 +501,22 @@ const startCreating_OG = async () => {
         dnaList.add(filterDNAOptions(newDna));
         editionCount++;
         abstractedIndexes.shift();
-      } else {
-        console.log("DNA exists!");
-        failedCount++;
-        if (failedCount >= uniqueDnaTorrance) {
-          console.log(
-            `You need more layers or elements to grow your edition to ${startAt + layerConfigurations[layerConfigIndex].growEditionSizeTo} artworks!`
-          );
-          process.exit();
-        }
-      }
+      // } else {
+      //   console.log("DNA exists!");
+      //   failedCount++;
+      //   if (failedCount >= uniqueDnaTorrance) {
+      //     console.log(
+      //       `You need more layers or elements to grow your edition to ${startAt + config[layerConfigIndex].growEditionSizeTo} artworks!`
+      //     );
+      //     process.exit();
+      //   }
+      // }
     }
     layerConfigIndex++;
   }
   writeMetaData(JSON.stringify(metadataList, null, 2));
 };
 
-module.exports = { startCreating, buildSetup, getElements };
+
+
+module.exports = { startCreating, startCreatingEmpty, buildSetup, getElements };

@@ -6,7 +6,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "darkside";
-const description = "Because we all have one";
+const description = "Because we all have a Darkside";
 const baseUri = "ipfs://123456789";
 
 const solanaMetadata = {
