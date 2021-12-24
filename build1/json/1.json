@@ -1,0 +1,38 @@
+{
+  "name": "darkside #1",
+  "description": "Because we all have one",
+  "image": "ipfs://123456789/1.png",
+  "dna": "8c8bfd4615be2d275f4f9448a36b472e75f2d7f3",
+  "edition": 1,
+  "date": 1640373410403,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "bg_07"
+    },
+    {
+      "trait_type": "Body",
+      "value": "male_base_wh_01"
+    },
+    {
+      "trait_type": "Tattoo",
+      "value": "male_tattoo_02"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "male_mouth_02"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "male_eyes_02"
+    },
+    {
+      "trait_type": "Jewel",
+      "value": "male_jewel_02"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "male_access_01"
+    }
+  ]
+}
