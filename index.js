@@ -41,7 +41,7 @@ const config_empty = [
   {
     configName:'empty',
     startAt: 1,
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 6000,
     location: '/layers/placeholder',
     layersOrder: [
       { name: "ph" }

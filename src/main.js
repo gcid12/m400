@@ -119,7 +119,9 @@ const addMetadata = (_dna, _edition, empty) => {
   let tempMetadata = {
     name: `${namePrefix} #${_edition}`,
     description: description,
-    image: `${baseUri}/${empty ? '1' : _edition}.png`,
+    //image: `${baseUri}/${empty ? '1' : _edition}.png`,
+    //image: empty ? `https://www.thenormies.io/ph.jpg` : `${baseUri}/${_edition}.png`,
+    image: `https://www.thenormies.io/ph.jpg`,
     dna: sha1(_dna),
     edition: _edition,
     date: dateTime,
@@ -489,7 +491,7 @@ const startCreatingEmpty = async (config) => {
           debugLogs
             ? console.log("Editions left to create: ", abstractedIndexes)
             : null;
-          saveImage(11);
+          saveImage(1);
           addMetadata(newDna, abstractedIndexes[0], true);
           saveMetaDataSingleFile(abstractedIndexes[0]);
           console.log(
