@@ -7,6 +7,17 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "normies";
 const description = "https://thenormies.io";
+//PROBLEM: To know this URI, I need to upload the images to IPFS before running this command, but how can I do that if this command generates also the images. 
+// On his Tutorial HL is using a goDaddy host so he can easily predict this baseURI, not our case
+
+//Solution1:
+//Run this command with a predicatble hosted URI, it can be a S3 bucket. 
+//Never run this command again
+//Upload the entire image file to IPFS, get the ID
+  //https://gateway.pinata.cloud/ipfs/abs1234
+//Use Scripts inside Visual Studio Code to replace that specific string for the new base
+  //https://gateway.pinata.cloud/ipfs/abs1234/images/
+
 const baseUri = "ipfs://123456789";
 
 const solanaMetadata = {

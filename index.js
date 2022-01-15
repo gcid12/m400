@@ -5,7 +5,7 @@ const config_male1 = [
   {
     configName:'male1',
     startAt: 1,
-    growEditionSizeTo: 100,
+    growEditionSizeTo: 10,
     location: '/layers/male',
     layersOrder: [
       { name: "Background" },
@@ -23,7 +23,7 @@ const config_female1 = [
   {
     configName:'female1',
     startAt: 101,
-    growEditionSizeTo: 100,
+    growEditionSizeTo: 10,
     location: '/layers/female',
     layersOrder: [
       { name: "Background" },
@@ -41,7 +41,7 @@ const config_empty = [
   {
     configName:'empty',
     startAt: 1,
-    growEditionSizeTo: 6000,
+    growEditionSizeTo: 10000,
     location: '/layers/placeholder',
     layersOrder: [
       { name: "ph" }
@@ -51,8 +51,8 @@ const config_empty = [
 
 (() => {
   buildSetup();
-   //startCreating(config_male1);
-   //startCreating(config_female1);
+   startCreating(config_male1);
+   startCreating(config_female1);
 
-  startCreatingEmpty(config_empty);
+  //startCreatingEmpty(config_empty);
 })();
