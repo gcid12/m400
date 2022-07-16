@@ -23,7 +23,7 @@ const config_female0k = [
     configName:'vfemale',
     startAt: 100,
     growEditionSizeTo: 900,
-    location: '/layers/female',
+    location: '/layers/femaleZombie',
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -1256,10 +1256,10 @@ const config_empty = [
 (() => {
   buildSetup();
 
-  //startCreating(config_female0k);
-  //startCreating(config_male1k);
+  startCreating(config_female0k);
+  // startCreating(config_male1k);
   // startCreating(config_female2k);
-  //startCreating(config_male3k);
+  // startCreating(config_male3k);
   // startCreating(config_female4k);
   // startCreating(config_male5k);
   // startCreating(config_female6k);
@@ -1268,95 +1268,95 @@ const config_empty = [
   // startCreating(config_male9k);
 
 
-  startCreating(config_female_glitch0k);
-  startCreating(config_female_astro0k);
-  startCreating(config_female_fire0k);
-  startCreating(config_male_fire0k);
-  startCreating(config_female_electric0k);
-  startCreating(config_male_electric0k);
-  startCreating(config_female_red0k);
-  startCreating(config_male_red0k);
+  // startCreating(config_female_glitch0k);
+  // startCreating(config_female_astro0k);
+  // startCreating(config_female_fire0k);
+  // startCreating(config_male_fire0k);
+  // startCreating(config_female_electric0k);
+  // startCreating(config_male_electric0k);
+  // startCreating(config_female_red0k);
+  // startCreating(config_male_red0k);
 
-  startCreating(config_female_glitch1k);
-  startCreating(config_female_astro1k);
-  startCreating(config_female_fire1k);
-  startCreating(config_male_fire1k);
-  startCreating(config_female_electric1k);
-  startCreating(config_male_electric1k);
-  startCreating(config_female_red1k);
-  startCreating(config_male_red1k);
+  // startCreating(config_female_glitch1k);
+  // startCreating(config_female_astro1k);
+  // startCreating(config_female_fire1k);
+  // startCreating(config_male_fire1k);
+  // startCreating(config_female_electric1k);
+  // startCreating(config_male_electric1k);
+  // startCreating(config_female_red1k);
+  // startCreating(config_male_red1k);
 
-  startCreating(config_female_glitch2k);
-  startCreating(config_female_astro2k);
-  startCreating(config_female_fire2k);
-  startCreating(config_male_fire2k);
-  startCreating(config_female_electric2k);
-  startCreating(config_male_electric2k);
-  startCreating(config_female_red2k);
-  startCreating(config_male_red2k);
+  // startCreating(config_female_glitch2k);
+  // startCreating(config_female_astro2k);
+  // startCreating(config_female_fire2k);
+  // startCreating(config_male_fire2k);
+  // startCreating(config_female_electric2k);
+  // startCreating(config_male_electric2k);
+  // startCreating(config_female_red2k);
+  // startCreating(config_male_red2k);
 
-  startCreating(config_female_glitch3k);
-  startCreating(config_female_astro3k);
-  startCreating(config_female_fire3k);
-  startCreating(config_male_fire3k);
-  startCreating(config_female_electric3k);
-  startCreating(config_male_electric3k);
-  startCreating(config_female_red3k);
-  startCreating(config_male_red3k);
+  // startCreating(config_female_glitch3k);
+  // startCreating(config_female_astro3k);
+  // startCreating(config_female_fire3k);
+  // startCreating(config_male_fire3k);
+  // startCreating(config_female_electric3k);
+  // startCreating(config_male_electric3k);
+  // startCreating(config_female_red3k);
+  // startCreating(config_male_red3k);
 
-  startCreating(config_female_glitch4k);
-  startCreating(config_female_astro4k);
-  startCreating(config_female_fire4k);
-  startCreating(config_male_fire4k);
-  startCreating(config_female_electric4k);
-  startCreating(config_male_electric4k);
-  startCreating(config_female_red4k);
-  startCreating(config_male_red4k);
+  // startCreating(config_female_glitch4k);
+  // startCreating(config_female_astro4k);
+  // startCreating(config_female_fire4k);
+  // startCreating(config_male_fire4k);
+  // startCreating(config_female_electric4k);
+  // startCreating(config_male_electric4k);
+  // startCreating(config_female_red4k);
+  // startCreating(config_male_red4k);
 
-  startCreating(config_female_glitch5k);
-  startCreating(config_female_astro5k);
-  startCreating(config_female_fire5k);
-  startCreating(config_male_fire5k);
-  startCreating(config_female_electric5k);
-  startCreating(config_male_electric5k);
-  startCreating(config_female_red5k);
-  startCreating(config_male_red5k);
+  // startCreating(config_female_glitch5k);
+  // startCreating(config_female_astro5k);
+  // startCreating(config_female_fire5k);
+  // startCreating(config_male_fire5k);
+  // startCreating(config_female_electric5k);
+  // startCreating(config_male_electric5k);
+  // startCreating(config_female_red5k);
+  // startCreating(config_male_red5k);
 
-  startCreating(config_female_glitch6k);
-  startCreating(config_female_astro6k);
-  startCreating(config_female_fire6k);
-  startCreating(config_male_fire6k);
-  startCreating(config_female_electric6k);
-  startCreating(config_male_electric6k);
-  startCreating(config_female_red6k);
-  startCreating(config_male_red6k);
+  // startCreating(config_female_glitch6k);
+  // startCreating(config_female_astro6k);
+  // startCreating(config_female_fire6k);
+  // startCreating(config_male_fire6k);
+  // startCreating(config_female_electric6k);
+  // startCreating(config_male_electric6k);
+  // startCreating(config_female_red6k);
+  // startCreating(config_male_red6k);
 
-  startCreating(config_female_glitch7k);
-  startCreating(config_female_astro7k);
-  startCreating(config_female_fire7k);
-  startCreating(config_male_fire7k);
-  startCreating(config_female_electric7k);
-  startCreating(config_male_electric7k);
-  startCreating(config_female_red7k);
-  startCreating(config_male_red6k);
+  // startCreating(config_female_glitch7k);
+  // startCreating(config_female_astro7k);
+  // startCreating(config_female_fire7k);
+  // startCreating(config_male_fire7k);
+  // startCreating(config_female_electric7k);
+  // startCreating(config_male_electric7k);
+  // startCreating(config_female_red7k);
+  // startCreating(config_male_red7k);
 
-  startCreating(config_female_glitch8k);
-  startCreating(config_female_astro8k);
-  startCreating(config_female_fire8k);
-  startCreating(config_male_fire8k);
-  startCreating(config_female_electric8k);
-  startCreating(config_male_electric8k);
-  startCreating(config_female_red8k);
-  startCreating(config_male_red8k);
+  // startCreating(config_female_glitch8k);
+  // startCreating(config_female_astro8k);
+  // startCreating(config_female_fire8k);
+  // startCreating(config_male_fire8k);
+  // startCreating(config_female_electric8k);
+  // startCreating(config_male_electric8k);
+  // startCreating(config_female_red8k);
+  // startCreating(config_male_red8k);
 
-  startCreating(config_female_glitch9k);
-  startCreating(config_female_astro9k);
-  startCreating(config_female_fire9k);
-  startCreating(config_male_fire9k);
-  startCreating(config_female_electric9k);
-  startCreating(config_male_electric9k);
-  startCreating(config_female_red9k);
-  startCreating(config_male_red9k);
+  // startCreating(config_female_glitch9k);
+  // startCreating(config_female_astro9k);
+  // startCreating(config_female_fire9k);
+  // startCreating(config_male_fire9k);
+  // startCreating(config_female_electric9k);
+  // startCreating(config_male_electric9k);
+  // startCreating(config_female_red9k);
+  // startCreating(config_male_red9k);
   
   
 
